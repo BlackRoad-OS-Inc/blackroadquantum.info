@@ -1,0 +1,25 @@
+{
+  "name": "blackroadquantum.info",
+  "org": "BlackRoad-OS-Inc",
+  "category": "research",
+  "title": "BlackRoad Quantum Info",
+  "deploy": {
+    "target": "gematria",
+    "path": "/var/www/blackroad/blackroadquantum.info",
+    "ssl": "auto",
+    "cdn": true
+  },
+  "mirrors": {
+    "gitea": "https://git.blackroad.io/BlackRoad-OS-Inc/blackroadquantum.info",
+    "github": "https://github.com/BlackRoad-OS-Inc/blackroadquantum.info"
+  },
+  "ci": {
+    "on_push": ["build", "deploy"],
+    "on_pr": ["lint", "audit"]
+  },
+  "monitoring": {
+    "uptime": true,
+    "analytics": "roadanalytics",
+    "alerts": "nats"
+  }
+}
